@@ -18,5 +18,6 @@ public class NavbarTest extends BaseTest {
         //navbar.clickInfo();
         navbar.clickService();
         navbar.clickContact();
+
     }
 }

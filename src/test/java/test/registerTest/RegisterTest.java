@@ -7,14 +7,10 @@ import static pages.BasePage.getBaseUrl;
 import static pages.BasePage.sleep;
 
 public class RegisterTest extends BaseTest {
-//    private String newUrl = getBaseUrl()+ "autentificare-epiesa";
 
     @Test
 
     public void register(){
-
-//        register.clickContulMeu();
-//        register.clickLogin();  //locator??
 
         register.clickContulMeu();
         register.clickNewAccount();
@@ -35,14 +31,6 @@ public class RegisterTest extends BaseTest {
         register.clickPutereBWA();
         register.introduSerieSasiu("TRUZZZ8J881036156");
         register.clickAdaugaMasina();
-
-
-
-
-
-
-
-
 
 
     }

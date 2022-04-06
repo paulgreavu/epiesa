@@ -9,12 +9,9 @@ public class Register extends BasePage {
     private static final Logger LOG = LoggerFactory.getLogger(Register.class);
     private static Register instance;
 
-//    private By contulMeu = By.xpath("//*[@id=\"myNavbar\"]/ul[2]/li/a");
-//    private By loginContNou = By.xpath("/html/body/nav[2]/div/ul[2]/li/a");
 
     private By myAccount = By.xpath("//*[@id='myNavbar']/ul[2]/li/a");
     private By createNewAccount = By.xpath("//*[@id='myNavbar']/ul[2]/li/ul/li/a");
-
     private By numeField = By.xpath("//input[@name='login_utilizator']");
     private By parolaField = By.xpath("//input[@name='login_parola']");
     private By autentificare = By.xpath("//button[@onclick='this.form.submit();']");
@@ -32,13 +29,6 @@ public class Register extends BasePage {
     private By adaugaMasina = By.xpath("//input[@class='btn-red']");
 
 
-
-
-
-
-
-
-
     private Register() {
     }
 
@@ -48,16 +38,6 @@ public class Register extends BasePage {
         }
         return instance;
     }
-
-//    public void clickContulMeu(){
-//        LOG.info("Click on contul meu");
-//        driver.findElement(contulMeu).click();
-//    }
-//
-//    public void clickLogin(){
-//        LOG.info("Click on Login/Cont Nou button");
-//        driver.findElement(loginContNou).click();
-//    }
 
     public void clickContulMeu() {
         LOG.info("Click on contul meu");
@@ -139,8 +119,6 @@ public class Register extends BasePage {
         LOG.info("Add new car");
         driver.findElement(adaugaMasina).click();
     }
-
-
 
 }
 

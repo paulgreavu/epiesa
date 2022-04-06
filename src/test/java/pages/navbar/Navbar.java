@@ -21,13 +21,6 @@ public class Navbar extends BasePage {
     private By contact = By.xpath("//a[@href='/contact-epiesa/']");
 
 
-
-
-
-
-
-
-
     private Navbar(){
     }
 
@@ -85,11 +78,5 @@ public class Navbar extends BasePage {
         LOG.info("Click on the Contact button");
         driver.findElement(contact).click();
     }
-
-
-
-
-
-
 
  }

@@ -13,16 +13,12 @@ public class HomePage extends BasePage {
     private By pieseAuto = By.xpath("//a[@title='piese auto dupa marca']");
     private By audi = By.xpath("//img[@alt='piese auto audi']");
     private By tt = By.xpath("//img[@alt='piese auto audi tt']");
-    private By tt8J3 = By.xpath("//a[@title='piese auto audi TT (8J3)']");
-    private By tt8J320TFSI = By.xpath("//a[@title='piese auto audi TT 2.0 TFSI']");
-    private By ttBWA = By.xpath("/html/body/main/div[2]/div/div[1]/p/a"); //copy xpath
-    private By filtruUlei = By.xpath("//a[@title='Filtru aer AUDI TT (8J3) 2.0 TFSI benzina 200 cai']");
-
-
-
-
-
-
+    private By tt8J3 = By.xpath("//div/a[@title='piese auto audi TT (8J3)']");
+    private By tt8J320TFSI = By.xpath("//p/a[@title='piese auto audi TT 2.0 TFSI']");
+    private By ttBWA = By.xpath("//p/a[@title='piese auto audi tt 2.0 TFSI benzina 200 cai ']");
+    private By filtruUlei = By.xpath("//p/a[contains(text(), 'Filtru ulei')]");
+    private By filtruMann = By.xpath("//a[@title='Detalii complete Filtru ulei AUDI TT (8J3) 2.0 TFSI  benzina 200 cai MANN-FILTER HU719/6x']");
+    private By addItem = By.xpath("//button[@class='btn_red product_button new--cart']");
 
 
     private HomePage(){
@@ -34,7 +30,6 @@ public class HomePage extends BasePage {
         }
         return instance;
     }
-
 
 
     public boolean checkLogo() {
@@ -64,7 +59,7 @@ public class HomePage extends BasePage {
 
     public void clickTT8J320TFSI() {
         LOG.info("Click on the 2.0TFSI engine type button");
-        driver.findElement(tt8J320TFSI);
+        driver.findElement(tt8J320TFSI).click();
     }
 
     public void clickTTBWA() {
@@ -77,12 +72,14 @@ public class HomePage extends BasePage {
         driver.findElement(filtruUlei).click();
     }
 
+    public void clickFiltruMann() {
+        LOG.info("Click on the Mann filtre button");
+        driver.findElement(filtruMann).click();
+    }
 
-
-
-
-
-
-
+    public void addItem() {
+        LOG.info("Click on add to basket button");
+        driver.findElement(addItem).click();
+    }
 
 }
