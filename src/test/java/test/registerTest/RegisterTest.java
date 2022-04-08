@@ -3,7 +3,6 @@ package test.registerTest;
 import org.testng.annotations.Test;
 import test.BaseTest;
 
-import static pages.BasePage.getBaseUrl;
 import static pages.BasePage.sleep;
 
 public class RegisterTest extends BaseTest {
